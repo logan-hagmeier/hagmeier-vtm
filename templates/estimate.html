@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} {% endblock %}
+
+
+{% block body %} 
+<h2>VTM Price Estimator</h2>
+<form action="/add" method='POST'>
+<label for ="height">
+        Vertical Tank Height : <input type="text" id="height" name="height" required autofocus/>
+    </label>
+    <br />
+    <label for ="radius">
+        Vertical Tank Radius : <input type="text" id="radius" name="radius" required />
+    </label>
+    <br />
+    <input type="submit" value = "add">
+
+    <p>The Total estimate is: ${{tCost}}</p>
+</form>
+{% if tCost %}
+
+{% endif %}
+
+
+{% endblock %}
+
